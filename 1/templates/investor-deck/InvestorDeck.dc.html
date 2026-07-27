@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+(function(){
+  try {
+    if (localStorage.getItem('zing_investor_unlocked') !== '1') {
+      window.location.replace('../../index.html');
+    }
+  } catch (e) {}
+})();
+</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Investor Deck" description="Full-page presenter-mode pitch deck: loading screen, click/space to advance, hover-edge arrows" -->
+<helmet>
+<script src="./ds-base.js"></script>
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap">
+<style>
+html,body{margin:0;height:100%;background:#14211F}
+a{color:#5F7A63}a:hover{color:#1D2E32}
+@keyframes dkRise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes dkFade{from{opacity:0}to{opacity:1}}
+@keyframes dkPop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+@keyframes dkGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes dkPulse{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes dkLeaf{from{opacity:0;transform:translateY(10px) rotate(-6deg)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: no-preference){
+deck-stage section[data-deck-active] .an{animation:dkRise .65s cubic-bezier(.2,.7,.25,1) both}
+deck-stage section[data-deck-active] .af{animation:dkFade .9s ease both}
+deck-stage section[data-deck-active] .ap{animation:dkPop .6s cubic-bezier(.2,.7,.25,1) both}
+deck-stage section[data-deck-active] .ag{animation:dkGrow .9s cubic-bezier(.2,.7,.25,1) both;transform-origin:left}
+}
+.hz .hzc{opacity:0;transition:opacity .25s ease,transform .25s ease}
+.hz[data-hz="l"] .hzc{transform:translateX(-8px)}
+.hz[data-hz="r"] .hzc{transform:translateX(8px)}
+.hz:hover .hzc{opacity:1;transform:none}
+.introHint{animation:dkPulse 2.4s ease-in-out infinite}
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<section data-label="01 · Cover" data-screen-label="01 Cover" style="position:relative;width:100%;height:100%;background:#F5F1E8;color:#1D2E32;font-family:'Hanken Grotesk',sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden">
+<img class="ap" src="img/zing-logo.svg" alt="Zing" style="width:280px;margin-bottom:52px">
+<h1 class="an" style="animation-delay:.1s;margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:96px;line-height:1.05;letter-spacing:-.015em;text-align:center;max-width:1280px;text-wrap:balance">An extra set of hands,<br>right down the hall.</h1>
+<p class="an" style="animation-delay:.22s;margin:36px 0 0;font-size:28px;color:#647271;text-align:center;max-width:900px;line-height:1.5">One dedicated cleaner inside the building — and everything from a sink full of dishes to a full apartment clean, a tap away.</p>
+<div class="an" style="animation-delay:.34s;display:flex;align-items:center;gap:14px;margin-top:56px;font-size:22px;color:#3C4D4E">
+<span style="background:#DCE6D4;border:1px solid #C9D8C2;border-radius:999px;padding:10px 24px;font-weight:600">Alvaro · Co-founder &amp; CEO</span>
+<span style="background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:10px 24px">Investor Overview · Summer 2026</span>
+</div>
+<div class="af" style="animation-delay:1s;position:absolute;bottom:44px;left:0;right:0;text-align:center;font-size:19px;color:#8A9492">Click anywhere — or press space — to move through</div>
+</section>
+
+<section data-label="02 · What we do" data-screen-label="02 What we do" style="position:relative;width:100%;height:100%;background:#F5F1E8;color:#1D2E32;font-family:'Hanken Grotesk',sans-serif;overflow:hidden">
+<div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 560px;gap:60px;padding:110px 120px 90px">
+<div style="display:flex;flex-direction:column;justify-content:center;max-width:860px">
+<div class="an" style="font-size:21px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#5F7A63">What Zing does</div>
+<h2 class="an" style="animation-delay:.08s;margin:26px 0 0;font-family:'Newsreader',serif;font-weight:400;font-size:76px;line-height:1.06;letter-spacing:-.015em">One dedicated cleaner, inside the building.</h2>
+<p class="an" style="animation-delay:.16s;margin:34px 0 0;font-size:30px;line-height:1.55;color:#3C4D4E">Residents book everything from a sink full of dishes to a full apartment clean — handled by a housekeeping team that's already down the hall, not across town.</p>
+<div class="an" style="animation-delay:.26s;display:flex;gap:16px;margin-top:48px;flex-wrap:wrap">
+<span style="display:inline-flex;align-items:center;gap:12px;background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 22px 12px 14px;font-size:23px;font-weight:600;white-space:nowrap"><img src="icons/dishes.webp" alt="" style="width:42px;height:42px;object-fit:contain">Dishes</span>
+<span style="display:inline-flex;align-items:center;gap:12px;background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 22px 12px 14px;font-size:23px;font-weight:600;white-space:nowrap"><img src="icons/laundry.webp" alt="" style="width:42px;height:42px;object-fit:contain">Laundry</span>
+<span style="display:inline-flex;align-items:center;gap:12px;background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 22px 12px 14px;font-size:23px;font-weight:600;white-space:nowrap"><img src="icons/trash.webp" alt="" style="width:42px;height:42px;object-fit:contain">Trash run</span>
+<span style="display:inline-flex;align-items:center;gap:12px;background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 22px 12px 14px;font-size:23px;font-weight:600;white-space:nowrap"><img src="icons/couch.webp" alt="" style="width:42px;height:42px;object-fit:contain">Full clean</span>
+</div>
+<div class="an" style="animation-delay:.36s;display:flex;align-items:center;gap:26px;margin-top:42px;background:#DCE6D4;border:1px solid #C9D8C2;border-radius:24px;padding:0 30px 0 0;overflow:hidden;max-width:660px">
+<img src="img/cleaner-portrait.jpg" alt="Your building's dedicated Zing cleaner" style="width:150px;height:172px;object-fit:cover;object-position:center top;background:#FFFFFF;flex-shrink:0">
+<div style="padding:20px 0"><div style="font-family:'Newsreader',serif;font-size:30px;line-height:1.15">Meet your building's Zing pro</div><div style="font-size:21px;color:#3C4D4E;margin-top:6px">The same trusted face on every visit — just an elevator ride away.</div></div>
+</div>
+</div>
+<div class="ap" style="animation-delay:.2s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding-right:70px">
+<div style="width:429px;height:824px;flex-shrink:0">
+<iframe src="../../ui_kits/resident-scheduling/index.html?embed" title="Zing resident app — live" style="width:466px;height:896px;transform:scale(.92);transform-origin:top left;border:0"></iframe>
+</div>
+<div style="display:flex;align-items:center;gap:10px;font-size:20px;color:#647271"><span style="width:10px;height:10px;border-radius:50%;background:#4F7C5C"></span>The live resident app — go ahead, click around</div>
+</div>
+</div>
+</section>
+
+<section data-label="02B · Alt — cleaner &amp; building" data-screen-label="02B Alt" style="position:relative;width:100%;height:100%;background:#F5F1E8;color:#1D2E32;font-family:'Hanken Grotesk',sans-serif;overflow:hidden">
+<div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 740px;gap:70px;padding:100px 120px;box-sizing:border-box">
+<div style="display:flex;flex-direction:column;justify-content:center;max-width:800px">
+<div class="an" style="font-size:21px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#5F7A63">What Zing does</div>
+<h2 class="an" style="animation-delay:.08s;margin:26px 0 0;font-family:'Newsreader',serif;font-weight:400;font-size:76px;line-height:1.06;letter-spacing:-.015em">One dedicated cleaner, inside the building.</h2>
+<p class="an" style="animation-delay:.16s;margin:34px 0 0;font-size:30px;line-height:1.55;color:#3C4D4E">Residents book everything from a sink full of dishes to a full apartment clean — from a neighbor they know by name, not a stranger driving across town.</p>
+<div class="an" style="animation-delay:.26s;display:flex;gap:16px;margin-top:48px;flex-wrap:wrap">
+<span style="display:inline-flex;align-items:center;gap:12px;background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 22px 12px 14px;font-size:23px;font-weight:600;white-space:nowrap"><img src="icons/dishes.webp" alt="" style="width:42px;height:42px;object-fit:contain">Dishes</span>
+<span style="display:inline-flex;align-items:center;gap:12px;background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 22px 12px 14px;font-size:23px;font-weight:600;white-space:nowrap"><img src="icons/laundry.webp" alt="" style="width:42px;height:42px;object-fit:contain">Laundry</span>
+<span style="display:inline-flex;align-items:center;gap:12px;background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 22px 12px 14px;font-size:23px;font-weight:600;white-space:nowrap"><img src="icons/trash.webp" alt="" style="width:42px;height:42px;object-fit:contain">Trash run</span>
+<span style="display:inline-flex;align-items:center;gap:12px;background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 22px 12px 14px;font-size:23px;font-weight:600;white-space:nowrap"><img src="icons/couch.webp" alt="" style="width:42px;height:42px;object-fit:contain">Full clean</span>
+</div>
+</div>
+<div class="ap" style="animation-delay:.2s;position:relative">
+<img src="img/building-hamilton.jpg" alt="A Zing building in Miami" style="position:absolute;right:0;top:0;width:500px;height:100%;object-fit:cover;object-position:left center;border-radius:32px">
+<div style="position:absolute;right:26px;top:26px;background:rgba(251,249,244,.95);border-radius:999px;padding:12px 24px;font-size:21px;font-weight:600">The Hamilton · Miami</div>
+<img class="an" src="img/cleaner-portrait.jpg" alt="Your building's dedicated Zing cleaner" style="animation-delay:.34s;position:absolute;left:0;bottom:0;width:330px;height:450px;object-fit:cover;object-position:center top;background:#FFFFFF;border-radius:180px 180px 28px 28px;box-shadow:0 30px 70px -25px rgba(20,33,31,.45);border:1px solid #E6DECF">
+<div class="ap" style="animation-delay:.5s;position:absolute;left:22px;bottom:26px;background:#1D2E32;color:#F5F1E8;border-radius:999px;padding:13px 26px;font-size:21px;font-weight:600;white-space:nowrap">Your building's Zing pro</div>
+</div>
+</div>
+</section>
+
+<section data-label="03 · Density" data-screen-label="03 Density" style="position:relative;width:100%;height:100%;background:#F5F1E8;color:#1D2E32;font-family:'Hanken Grotesk',sans-serif;overflow:hidden">
+<img class="af" src="img/hallway-cart.jpeg" alt="Zing cart in an apartment hallway" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center">
+<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,241,232,.97) 0%,rgba(245,241,232,.92) 30%,rgba(245,241,232,.55) 50%,rgba(245,241,232,0) 68%)"></div>
+<div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding-left:120px;max-width:940px;box-sizing:border-box">
+<div class="an" style="font-size:21px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#5F7A63">Why it works</div>
+<h2 class="an" style="animation-delay:.08s;margin:26px 0 0;font-family:'Newsreader',serif;font-weight:400;font-size:80px;line-height:1.05;letter-spacing:-.015em">Hundreds of homes.<br>Zero drive time.</h2>
+<p class="an" style="animation-delay:.16s;margin:34px 0 0;font-size:30px;line-height:1.55;color:#3C4D4E;max-width:760px">Because one team serves hundreds of residents in a single building — instead of driving between houses — Zing can profitably offer the small chores traditional cleaning companies can't.</p>
+<div class="an" style="animation-delay:.26s;display:flex;gap:14px;margin-top:44px">
+<span style="background:#DCE6D4;border-radius:14px;padding:16px 24px;font-size:24px;font-weight:600">Travel time → service time</span>
+<span style="background:#FBF9F4;border:1px solid #E6DECF;border-radius:14px;padding:16px 24px;font-size:24px;font-weight:600">Small jobs, real margins</span>
+</div>
+</div>
+</section>
+
+<section data-label="04 · Sarah" data-screen-label="04 Sarah" style="position:relative;width:100%;height:100%;background:#F5F1E8;color:#1D2E32;font-family:'Hanken Grotesk',sans-serif;overflow:hidden">
+<img class="af" src="img/sarah-lobby.jpg" alt="Sarah heading out through her building's lobby" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center">
+<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,241,232,.97) 0%,rgba(245,241,232,.92) 30%,rgba(245,241,232,.55) 50%,rgba(245,241,232,0) 68%)"></div>
+<div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding-left:120px">
+<div class="an" style="font-size:21px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#5F7A63">Every Friday</div>
+<h2 class="an" style="animation-delay:.08s;margin:24px 0 0;font-family:'Newsreader',serif;font-weight:400;font-size:88px;line-height:1;letter-spacing:-.015em">Meet Sarah.</h2>
+<p class="an" style="animation-delay:.16s;margin:32px 0 0;font-size:29px;line-height:1.55;color:#3C4D4E;max-width:640px">She runs a busy Miami salon and just brought home a newborn. Every Friday she books the same visit — a quick tidy-up and a hand folding the laundry.</p>
+<p class="an" style="animation-delay:.26s;margin:40px 0 0;font-family:'Newsreader',serif;font-style:italic;font-size:40px;line-height:1.3;color:#1D2E32;max-width:640px">She doesn't need a cleaning service.<br>She needs an extra set of hands.</p>
+<p class="an" style="animation-delay:.36s;margin:30px 0 0;font-size:24px;line-height:1.5;color:#3C4D4E;max-width:540px">The everyday help traditional cleaning companies were never built to provide — and exactly the help residents actually want.</p>
+</div>
+<div class="ap" style="animation-delay:.4s;position:absolute;right:44px;bottom:44px;display:flex;align-items:center;gap:14px;background:#FBF9F4;border-radius:999px;padding:14px 28px 14px 16px;box-shadow:0 16px 40px -16px rgba(20,33,31,.4);font-size:23px;font-weight:600"><img src="icons/folding.webp" alt="" style="width:44px;height:44px;object-fit:contain">Tidy-up + laundry fold · Fridays</div>
+</section>
+
+<section data-label="05 · Traction" data-screen-label="05 Traction" style="position:relative;width:100%;height:100%;background:#1D2E32;color:#F5F1E8;font-family:'Hanken Grotesk',sans-serif;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:0 140px;box-sizing:border-box">
+<div class="an" style="font-size:21px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#C9D8C2">Five months in</div>
+<div class="an" style="animation-delay:.1s;margin-top:30px;font-family:'Newsreader',serif;font-weight:400;letter-spacing:-.02em;line-height:1;font-size:170px"><span style="color:#8A9492">$0 →</span> $250K <span style="font-size:64px;color:#C9D8C2">ARR</span></div>
+<div class="an" style="animation-delay:.2s;margin-top:22px;font-size:30px;color:#C9D8C2">from launch to annual recurring revenue, in five months.</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-top:80px">
+<div class="an" style="animation-delay:.3s;border-top:1px solid rgba(245,241,232,.25);padding-top:26px"><div style="font-family:'Newsreader',serif;font-size:64px">5</div><div style="font-size:25px;color:#C9D8C2;margin-top:6px">buildings launched</div></div>
+<div class="an" style="animation-delay:.38s;border-top:1px solid rgba(245,241,232,.25);padding-top:26px"><div style="font-family:'Newsreader',serif;font-size:64px">1,000+</div><div style="font-size:25px;color:#C9D8C2;margin-top:6px">resident visits completed</div></div>
+<div class="an" style="animation-delay:.46s;border-top:1px solid rgba(245,241,232,.25);padding-top:26px"><div style="font-family:'Newsreader',serif;font-size:64px">~$0</div><div style="font-size:25px;color:#C9D8C2;margin-top:6px">marketing spend to acquire residents</div></div>
+</div>
+</section>
+
+<section data-label="06 · Playbook" data-screen-label="06 Playbook" style="position:relative;width:100%;height:100%;background:#F5F1E8;color:#1D2E32;font-family:'Hanken Grotesk',sans-serif;overflow:hidden;padding:104px 120px;box-sizing:border-box">
+<div class="an" style="font-size:21px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#5F7A63">The growth engine</div>
+<h2 class="an" style="animation-delay:.08s;margin:24px 0 0;font-family:'Newsreader',serif;font-weight:400;font-size:74px;line-height:1.05;letter-spacing:-.015em">Building by building, block by block, city by city.</h2>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-top:72px">
+<div class="an" style="animation-delay:.16s;background:#FBF9F4;border:1px solid #E6DECF;border-radius:24px;padding:30px 26px"><div style="font-size:20px;font-weight:700;letter-spacing:.14em;color:#8A9492">DAY 0</div><div style="font-family:'Newsreader',serif;font-size:35px;margin-top:14px;line-height:1.15">Target the building</div></div>
+<div class="an" style="animation-delay:.24s;background:#FBF9F4;border:1px solid #E6DECF;border-radius:24px;padding:30px 26px"><div style="font-size:20px;font-weight:700;letter-spacing:.14em;color:#8A9492">DAY 5</div><div style="font-family:'Newsreader',serif;font-size:35px;margin-top:14px;line-height:1.15">Meet property management</div></div>
+<div class="an" style="animation-delay:.32s;background:#DCE6D4;border:1px solid #C9D8C2;border-radius:24px;padding:30px 26px"><div style="font-size:20px;font-weight:700;letter-spacing:.14em;color:#5F7A63">CLOSE</div><div style="font-family:'Newsreader',serif;font-size:35px;margin-top:14px;line-height:1.15">85% of those meetings sign</div></div>
+<div class="an" style="animation-delay:.4s;background:#FBF9F4;border:1px solid #E6DECF;border-radius:24px;padding:30px 26px"><div style="font-size:20px;font-weight:700;letter-spacing:.14em;color:#8A9492">DAY 15</div><div style="font-family:'Newsreader',serif;font-size:35px;margin-top:14px;line-height:1.15">Zing launches</div></div>
+<div class="an" style="animation-delay:.48s;background:#FBF9F4;border:1px solid #E6DECF;border-radius:24px;padding:30px 26px"><div style="font-size:20px;font-weight:700;letter-spacing:.14em;color:#8A9492">WEEK 2</div><div style="font-family:'Newsreader',serif;font-size:35px;margin-top:14px;line-height:1.15">Building funds its own team</div></div>
+</div>
+<div class="an" style="animation-delay:.58s;display:flex;align-items:center;justify-content:space-between;gap:40px;margin-top:64px;background:#FBF9F4;border:1px solid #E6DECF;border-radius:24px;padding:34px 44px">
+<div style="font-size:27px;line-height:1.5;color:#3C4D4E;max-width:1050px">Zing is offered as a <b style="color:#1D2E32">free resident amenity</b> — property managers champion it at the building level, so there's no long, top-down multifamily sales cycle.</div>
+<div style="flex-shrink:0;background:#1D2E32;color:#F5F1E8;border-radius:999px;padding:18px 34px;font-size:26px;font-weight:600">Each building → $70–90K ARR</div>
+</div>
+</section>
+
+<section data-label="07 · Insight" data-screen-label="07 Insight" style="position:relative;width:100%;height:100%;background:#F5F1E8;color:#1D2E32;font-family:'Hanken Grotesk',sans-serif;overflow:hidden;padding:104px 120px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:80px">
+<div style="display:flex;flex-direction:column;justify-content:center">
+<div class="an" style="font-size:21px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#5F7A63">The unique insight</div>
+<h2 class="an" style="animation-delay:.08s;margin:26px 0 0;font-family:'Newsreader',serif;font-weight:400;font-size:72px;line-height:1.08;letter-spacing:-.015em">The industry sells one product: the full clean.</h2>
+<p class="an" style="animation-delay:.16s;margin:34px 0 0;font-size:29px;line-height:1.55;color:#3C4D4E;max-width:640px">Break cleaning into small, chore-sized tasks and the audience changes shape — small chores aren't another product line, they're what expands adoption.</p>
+<div class="an" style="animation-delay:.26s;display:flex;gap:18px;margin-top:44px">
+<img src="icons/dishes.webp" alt="" style="width:64px;height:64px;object-fit:contain"><img src="icons/trash.webp" alt="" style="width:64px;height:64px;object-fit:contain"><img src="icons/folding.webp" alt="" style="width:64px;height:64px;object-fit:contain"><img src="icons/plants.webp" alt="" style="width:64px;height:64px;object-fit:contain"><img src="icons/bed.webp" alt="" style="width:64px;height:64px;object-fit:contain"><img src="icons/groceries.webp" alt="" style="width:64px;height:64px;object-fit:contain">
+</div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:22px;align-self:center">
+<div class="ap" style="animation-delay:.2s;background:#FBF9F4;border:1px solid #E6DECF;border-radius:26px;padding:36px"><div style="font-family:'Newsreader',serif;font-size:88px;line-height:1">7%</div><div style="font-size:23px;color:#647271;margin-top:12px;line-height:1.4">of multifamily households hire any outside cleaning help</div></div>
+<div class="ap" style="animation-delay:.3s;background:#FBF9F4;border:1px solid #E6DECF;border-radius:26px;padding:36px"><div style="font-family:'Newsreader',serif;font-size:88px;line-height:1">75%</div><div style="font-size:23px;color:#647271;margin-top:12px;line-height:1.4">of Zing users had never hired a cleaning company before</div></div>
+<div class="ap" style="animation-delay:.4s;background:#FBF9F4;border:1px solid #E6DECF;border-radius:26px;padding:36px"><div style="font-family:'Newsreader',serif;font-size:88px;line-height:1">50%</div><div style="font-size:23px;color:#647271;margin-top:12px;line-height:1.4">of our visits are small chores, not full cleans</div></div>
+<div class="ap" style="animation-delay:.5s;background:#1D2E32;color:#F5F1E8;border-radius:26px;padding:36px"><div style="font-family:'Newsreader',serif;font-size:88px;line-height:1">30%</div><div style="font-size:23px;color:#C9D8C2;margin-top:12px;line-height:1.4">of a building's residents adopt Zing — the chore wedge at work</div></div>
+</div>
+</section>
+
+<section data-label="08 · Flywheel" data-screen-label="08 Flywheel" style="position:relative;width:100%;height:100%;background:#F5F1E8;color:#1D2E32;font-family:'Hanken Grotesk',sans-serif;overflow:hidden">
+<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:90px 120px">
+<h2 class="an" style="margin:0 0 8px;font-family:'Newsreader',serif;font-weight:400;font-size:68px;letter-spacing:-.015em;text-align:center">Small chores spin the flywheel.</h2>
+<p class="an" style="animation-delay:.08s;margin:0;font-size:26px;color:#647271;max-width:900px;text-align:center;line-height:1.5">Every visit makes the team more visible — and the next booking more likely. Adoption compounds inside the walls.</p>
+<div class="ap" style="animation-delay:.2s;position:relative;width:660px;height:610px;margin-top:40px">
+<svg viewBox="0 0 660 610" style="position:absolute;inset:0;width:100%;height:100%"><circle cx="330" cy="305" r="215" fill="none" stroke="#B2C0A8" stroke-width="3" stroke-dasharray="4 14" stroke-linecap="round"></circle></svg>
+<img src="img/zing-logo.svg" alt="" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:150px;opacity:.9">
+<div style="position:absolute;left:50%;top:0;transform:translateX(-50%);background:#1D2E32;color:#F5F1E8;border-radius:999px;padding:15px 30px;font-size:23px;font-weight:600;white-space:nowrap">More small chores booked</div>
+<div style="position:absolute;right:-30px;top:200px;background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:15px 30px;font-size:23px;font-weight:600;white-space:nowrap">Team visible in the building</div>
+<div style="position:absolute;right:40px;bottom:36px;background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:15px 30px;font-size:23px;font-weight:600;white-space:nowrap">Trust + word of mouth</div>
+<div style="position:absolute;left:40px;bottom:36px;background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:15px 30px;font-size:23px;font-weight:600;white-space:nowrap">More residents join</div>
+<div style="position:absolute;left:-50px;top:200px;background:#DCE6D4;border:1px solid #C9D8C2;border-radius:999px;padding:15px 30px;font-size:23px;font-weight:600;white-space:nowrap">Density → better margins</div>
+</div>
+<div class="an" style="animation-delay:.5s;display:flex;gap:14px;margin-top:30px">
+<span style="background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 26px;font-size:22px;font-weight:600">Virtually $0 to acquire a resident</span>
+<span style="background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 26px;font-size:22px;font-weight:600">Virtually $0 CapEx to launch a building</span>
+</div>
+</div>
+</section>
+
+<section data-label="09 · Team" data-screen-label="09 Team" style="position:relative;width:100%;height:100%;background:#F5F1E8;color:#1D2E32;font-family:'Hanken Grotesk',sans-serif;overflow:hidden;padding:104px 140px;box-sizing:border-box">
+<div class="an" style="font-size:21px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#5F7A63">Who's building it</div>
+<h2 class="an" style="animation-delay:.08s;margin:24px 0 0;font-family:'Newsreader',serif;font-weight:400;font-size:72px;line-height:1.05;letter-spacing:-.015em">Operators, obsessed with the details.</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:64px">
+<div class="an" style="animation-delay:.18s;display:flex;gap:36px;align-items:center;background:#FBF9F4;border:1px solid #E6DECF;border-radius:30px;padding:44px">
+<image-slot id="slot-alvaro" shape="circle" src="img/alvaro.jpg" placeholder="Drop Alvaro's headshot" style="width:210px;height:210px;flex-shrink:0"></image-slot>
+<div><div style="font-family:'Newsreader',serif;font-size:46px">Alvaro</div><div style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5F7A63;margin:8px 0 16px">Co-founder &amp; CEO</div><div style="font-size:25px;line-height:1.5;color:#3C4D4E">A career building SMBs and venture-backed startups — listening at the front line, finding friction, turning it into scalable systems.</div></div>
+</div>
+<div class="an" style="animation-delay:.28s;display:flex;gap:36px;align-items:center;background:#FBF9F4;border:1px solid #E6DECF;border-radius:30px;padding:44px">
+<image-slot id="slot-tapan" shape="circle" src="img/tapan.jpg" placeholder="Drop Tapan's headshot" style="width:210px;height:210px;flex-shrink:0"></image-slot>
+<div><div style="font-family:'Newsreader',serif;font-size:46px">Tapan Patel</div><div style="font-size:22px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5F7A63;margin:8px 0 16px">Co-founder &amp; CTO</div><div style="font-size:25px;line-height:1.5;color:#3C4D4E">Built and scaled startups, led app development at Trulia, and shipped AI products for in-home service businesses.</div></div>
+</div>
+</div>
+<p class="an" style="animation-delay:.4s;margin:56px 0 0;font-size:27px;line-height:1.55;color:#3C4D4E;max-width:1350px">Together: the operating and technical depth to turn an operationally intensive business into a software-enabled, capital-efficient growth engine.</p>
+</section>
+
+<section data-label="10 · Ops = software" data-screen-label="10 Ops software" style="position:relative;width:100%;height:100%;background:#F5F1E8;color:#1D2E32;font-family:'Hanken Grotesk',sans-serif;overflow:hidden">
+<div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 560px;gap:50px;padding:104px 100px 104px 120px;box-sizing:border-box">
+<div style="display:flex;flex-direction:column;justify-content:center">
+<div class="an" style="font-size:21px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#5F7A63">Why now</div>
+<h2 class="an" style="animation-delay:.08s;margin:26px 0 0;font-family:'Newsreader',serif;font-weight:400;font-size:72px;line-height:1.06;letter-spacing:-.015em">The ops team is software.</h2>
+<p class="an" style="animation-delay:.16s;margin:32px 0 0;font-size:29px;line-height:1.55;color:#3C4D4E;max-width:800px">Five years ago this business needed a corporate operations team. Today, AI automates it.</p>
+<div class="an" style="animation-delay:.26s;display:flex;flex-wrap:wrap;gap:14px;margin-top:40px;max-width:820px">
+<span style="background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 24px;font-size:23px;font-weight:600">Scheduling</span>
+<span style="background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 24px;font-size:23px;font-weight:600">Pricing</span>
+<span style="background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 24px;font-size:23px;font-weight:600">Quality control</span>
+<span style="background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 24px;font-size:23px;font-weight:600">Customer support</span>
+<span style="background:#FBF9F4;border:1px solid #E6DECF;border-radius:999px;padding:12px 24px;font-size:23px;font-weight:600">Workforce coordination</span>
+</div>
+<div class="an" style="animation-delay:.36s;margin-top:40px;background:#DCE6D4;border:1px solid #C9D8C2;border-radius:24px;padding:30px 36px;font-size:27px;line-height:1.5;max-width:820px">Every new booking <b>reshapes the cleaners' schedules in real time</b> to maximize utilization.</div>
+</div>
+<div class="ap" style="animation-delay:.24s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding-right:50px">
+<div style="width:429px;height:824px;flex-shrink:0">
+<iframe src="../../ui_kits/resident-scheduling/index.html?embed&amp;preset=booking" title="Zing resident app — live booking demo" style="width:466px;height:896px;transform:scale(.92);transform-origin:top left;border:0"></iframe>
+</div>
+<div style="display:flex;align-items:center;gap:10px;font-size:20px;color:#647271"><span style="width:10px;height:10px;border-radius:50%;background:#4F7C5C"></span>Live — three chores already queued, tap Continue</div>
+</div>
+</div>
+</section>
+
+<section data-label="11 · Market" data-screen-label="11 Market" style="position:relative;width:100%;height:100%;background:#F5F1E8;color:#1D2E32;font-family:'Hanken Grotesk',sans-serif;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:0 140px;box-sizing:border-box">
+<div class="an" style="font-size:21px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#5F7A63">The market</div>
+<h2 class="an" style="animation-delay:.08s;margin:26px 0 0;font-family:'Newsreader',serif;font-weight:400;font-size:80px;line-height:1.05;letter-spacing:-.015em">$11B hiding in plain sight.</h2>
+<div style="display:flex;align-items:stretch;gap:26px;margin-top:70px">
+<div class="ap" style="animation-delay:.18s;flex:1.3;background:#FBF9F4;border:1px solid #E6DECF;border-radius:28px;padding:40px"><div style="font-family:'Newsreader',serif;font-size:84px;line-height:1">120,000</div><div style="font-size:24px;color:#647271;margin-top:12px;line-height:1.4">professionally managed multifamily buildings in the U.S.</div></div>
+<div class="af" style="animation-delay:.3s;display:flex;align-items:center;font-family:'Newsreader',serif;font-size:64px;color:#8A9492">×</div>
+<div class="ap" style="animation-delay:.3s;flex:1;background:#FBF9F4;border:1px solid #E6DECF;border-radius:28px;padding:40px"><div style="font-family:'Newsreader',serif;font-size:84px;line-height:1">$70–90K</div><div style="font-size:24px;color:#647271;margin-top:12px;line-height:1.4">annual revenue per building</div></div>
+<div class="af" style="animation-delay:.42s;display:flex;align-items:center;font-family:'Newsreader',serif;font-size:64px;color:#8A9492">=</div>
+<div class="ap" style="animation-delay:.42s;flex:1;background:#1D2E32;color:#F5F1E8;border-radius:28px;padding:40px"><div style="font-family:'Newsreader',serif;font-size:84px;line-height:1">$11B+</div><div style="font-size:24px;color:#C9D8C2;margin-top:12px;line-height:1.4">before any expansion beyond housekeeping</div></div>
+</div>
+<p class="an" style="animation-delay:.54s;margin:60px 0 0;font-size:28px;line-height:1.55;color:#3C4D4E;max-width:1350px">And housekeeping is the entry point — the same trusted, in-building workforce becomes the <b style="color:#1D2E32">resident-services layer</b> of multifamily housing.</p>
+</section>
+
+<section data-label="12 · The ask" data-screen-label="12 Ask" style="position:relative;width:100%;height:100%;background:#1D2E32;color:#F5F1E8;font-family:'Hanken Grotesk',sans-serif;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:0 140px;box-sizing:border-box">
+<div class="an" style="font-size:21px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#C9D8C2">The ask</div>
+<div class="an" style="animation-delay:.1s;margin-top:26px;font-family:'Newsreader',serif;font-weight:400;letter-spacing:-.02em;line-height:1;font-size:180px">$400K <span style="font-size:60px;color:#C9D8C2">angel round</span></div>
+<div style="margin-top:56px;max-width:1200px">
+<div style="display:flex;justify-content:space-between;font-size:24px;color:#C9D8C2;margin-bottom:14px"><span><b style="color:#F5F1E8">60% committed</b> — closing the rest now</span><span>$400K</span></div>
+<div style="height:18px;border-radius:999px;background:rgba(245,241,232,.15);overflow:hidden"><div class="ag" style="animation-delay:.3s;width:60%;height:100%;border-radius:999px;background:#C8A86A"></div></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-top:70px;max-width:1400px">
+<div class="an" style="animation-delay:.4s;border-top:1px solid rgba(245,241,232,.25);padding-top:24px;font-size:26px;line-height:1.45"><b>40 building launches</b><br><span style="color:#C9D8C2">the proven playbook, repeated</span></div>
+<div class="an" style="animation-delay:.48s;border-top:1px solid rgba(245,241,232,.25);padding-top:24px;font-size:26px;line-height:1.45"><b>$4M ARR in 18 months</b><br><span style="color:#C9D8C2">building-by-building math</span></div>
+<div class="an" style="animation-delay:.56s;border-top:1px solid rgba(245,241,232,.25);padding-top:24px;font-size:26px;line-height:1.45"><b>Ops turned into software</b><br><span style="color:#C9D8C2">growth, CX and quality control</span></div>
+</div>
+<div class="an" style="animation-delay:.68s;display:flex;align-items:center;justify-content:space-between;margin-top:90px">
+<div style="font-family:'Newsreader',serif;font-style:italic;font-size:38px;color:#F5F1E8">"If you're interested, I'd love to chat." <span style="font-family:'Hanken Grotesk',sans-serif;font-style:normal;font-size:24px;color:#C9D8C2;margin-left:18px;white-space:nowrap">— Alvaro, Co-founder &amp; CEO</span></div>
+<img src="img/zing-logo-cream.svg" alt="Zing" style="width:150px;opacity:.95">
+</div>
+</section>
+
+<section data-label="14 · Try the app" data-screen-label="14 Try the app" style="position:relative;width:100%;height:100%;background:#F5F1E8;color:#1D2E32;font-family:'Hanken Grotesk',sans-serif;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center">
+<h2 class="an" style="margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:56px;letter-spacing:-.015em;text-align:center">See how easy it is to book a clean.</h2>
+<p class="an" style="animation-delay:.08s;margin:12px 0 0;font-size:24px;color:#647271;text-align:center">This is the real resident app — add a few chores, pick a time, check out.</p>
+<div class="ap" style="animation-delay:.18s;margin-top:22px;width:410px;height:789px;flex-shrink:0">
+<iframe src="../../ui_kits/resident-scheduling/index.html?embed" title="Zing resident app — try it" style="width:466px;height:896px;transform:scale(.88);transform-origin:top left;border:0"></iframe>
+</div>
+<a class="an" href="../../ui_kits/resident-scheduling/index.html" target="_blank" rel="noopener" style="animation-delay:.3s;display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:#1D2E32;color:#F5F1E8;border-radius:999px;padding:13px 28px;font-size:21px;font-weight:600;text-decoration:none">Open full screen<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"></path></svg></a>
+</section>
+
+<section data-label="15 · At a glance" data-screen-label="15 At a glance" style="position:relative;width:100%;height:100%;background:#1D2E32;color:#F5F1E8;font-family:'Hanken Grotesk',sans-serif;overflow:hidden;padding:84px 120px;box-sizing:border-box">
+<div style="display:flex;align-items:flex-end;justify-content:space-between">
+<div><div class="an" style="font-size:21px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#C9D8C2">The one-pager</div>
+<h2 class="an" style="animation-delay:.06s;margin:18px 0 0;font-family:'Newsreader',serif;font-weight:400;font-size:74px;line-height:1;letter-spacing:-.015em">Zing at a glance.</h2></div>
+<img class="af" src="img/zing-logo-cream.svg" alt="Zing" style="width:130px;opacity:.95;margin-bottom:8px">
+</div>
+<div data-hz="glance" style="display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:20px;margin-top:52px;height:560px">
+<div class="ap" style="animation-delay:.14s;grid-row:1/3;background:#F5F1E8;color:#1D2E32;border-radius:28px;padding:40px;display:flex;flex-direction:column;justify-content:space-between;cursor:default;transition:transform .25s ease" style-hover="transform:translateY(-6px)">
+<div style="font-size:22px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5F7A63">Annual recurring revenue</div>
+<div><div style="font-family:'Newsreader',serif;font-size:150px;line-height:.95;letter-spacing:-.02em">$250K</div>
+<div style="font-size:24px;color:#647271;margin-top:14px">$0 → $250K in five months</div></div>
+<div style="height:10px;border-radius:999px;background:#ECE4D5;overflow:hidden"><div class="ag" style="animation-delay:.5s;width:72%;height:100%;background:#5F7A63;border-radius:999px"></div></div>
+</div>
+<div class="ap" style="animation-delay:.2s;background:rgba(245,241,232,.07);border:1px solid rgba(245,241,232,.18);border-radius:28px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;cursor:default;transition:transform .25s ease,background .25s ease" style-hover="transform:translateY(-6px);background:rgba(245,241,232,.12)"><div style="font-family:'Newsreader',serif;font-size:76px;line-height:1">5</div><div style="font-size:22px;color:#C9D8C2;line-height:1.35">buildings live in Miami</div></div>
+<div class="ap" style="animation-delay:.26s;background:rgba(245,241,232,.07);border:1px solid rgba(245,241,232,.18);border-radius:28px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;cursor:default;transition:transform .25s ease,background .25s ease" style-hover="transform:translateY(-6px);background:rgba(245,241,232,.12)"><div style="font-family:'Newsreader',serif;font-size:76px;line-height:1">1,000+</div><div style="font-size:22px;color:#C9D8C2;line-height:1.35">resident visits completed</div></div>
+<div class="ap" style="animation-delay:.32s;background:rgba(245,241,232,.07);border:1px solid rgba(245,241,232,.18);border-radius:28px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;cursor:default;transition:transform .25s ease,background .25s ease" style-hover="transform:translateY(-6px);background:rgba(245,241,232,.12)"><div style="font-family:'Newsreader',serif;font-size:76px;line-height:1">30%</div><div style="font-size:22px;color:#C9D8C2;line-height:1.35">of residents adopt per building</div></div>
+<div class="ap" style="animation-delay:.38s;background:rgba(245,241,232,.07);border:1px solid rgba(245,241,232,.18);border-radius:28px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;cursor:default;transition:transform .25s ease,background .25s ease" style-hover="transform:translateY(-6px);background:rgba(245,241,232,.12)"><div style="font-family:'Newsreader',serif;font-size:76px;line-height:1">85%</div><div style="font-size:22px;color:#C9D8C2;line-height:1.35">of property-manager meetings sign</div></div>
+<div class="ap" style="animation-delay:.44s;background:rgba(245,241,232,.07);border:1px solid rgba(245,241,232,.18);border-radius:28px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;cursor:default;transition:transform .25s ease,background .25s ease" style-hover="transform:translateY(-6px);background:rgba(245,241,232,.12)"><div style="font-family:'Newsreader',serif;font-size:76px;line-height:1">~$0</div><div style="font-size:22px;color:#C9D8C2;line-height:1.35">resident acquisition cost</div></div>
+<div class="ap" style="animation-delay:.5s;background:#C8A86A;color:#1D2E32;border-radius:28px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;cursor:default;transition:transform .25s ease" style-hover="transform:translateY(-6px)"><div style="font-family:'Newsreader',serif;font-size:76px;line-height:1">$4M</div><div style="font-size:22px;line-height:1.35;font-weight:600">ARR target — 40 buildings, 18 months</div></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-top:36px">
+<div class="an" style="animation-delay:.56s;font-size:23px;color:#C9D8C2">$11B U.S. market · 120,000 buildings · $400K angel round, 60% committed</div>
+<div style="display:flex;gap:14px">
+<a class="an" href="one-pager.html" target="_blank" rel="noopener" style="animation-delay:.62s;display:inline-flex;align-items:center;background:rgba(245,241,232,.12);border:1px solid rgba(245,241,232,.35);color:#F5F1E8;border-radius:999px;padding:13px 28px;font-size:21px;font-weight:600;text-decoration:none">Download</a>
+<a class="an" href="https://calendly.com/liz-januarymemorials/30min?month=2026-07" target="_blank" rel="noopener" style="animation-delay:.68s;display:inline-flex;align-items:center;gap:10px;background:#F5F1E8;color:#1D2E32;border-radius:999px;padding:13px 28px;font-size:21px;font-weight:600;text-decoration:none">Schedule a Calendly call with Alvaro</a>
+</div>
+</div>
+</section>
+
+</x-import>
+
+<div data-hz="l" class="hz" ref="{{hzLRef}}" onClick="{{goPrev}}" style="position:fixed;left:0;top:0;bottom:0;width:9%;z-index:60;display:flex;align-items:center;justify-content:flex-start;padding-left:26px;cursor:pointer">
+<span class="hzc" style="width:64px;height:64px;border-radius:50%;background:#FBF9F4;border:1px solid #E2D8C6;box-shadow:0 10px 30px -10px rgba(20,33,31,.5);display:grid;place-items:center;color:#1D2E32"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg></span>
+</div>
+<div data-hz="r" class="hz" onClick="{{goNext}}" style="position:fixed;right:0;top:0;bottom:0;width:9%;z-index:60;display:flex;align-items:center;justify-content:flex-end;padding-right:26px;cursor:pointer">
+<span class="hzc" style="width:64px;height:64px;border-radius:50%;background:#FBF9F4;border:1px solid #E2D8C6;box-shadow:0 10px 30px -10px rgba(20,33,31,.5);display:grid;place-items:center;color:#1D2E32"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>
+</div>
+
+<button ref="{{railBtnRef}}" onClick="{{toggleRail}}" title="Show / hide the slide panel" aria-label="Show or hide the slide panel" style="position:fixed;left:16px;bottom:16px;z-index:70;width:44px;height:44px;border-radius:50%;border:1px solid #E2D8C6;background:rgba(251,249,244,.92);color:#1D2E32;display:grid;place-items:center;cursor:pointer;opacity:.4;box-shadow:0 8px 24px -10px rgba(20,33,31,.5);transition:opacity .2s ease,left .2s ease" style-hover="opacity:1">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="3"></rect><path d="M9.5 4v16"></path></svg>
+</button>
+
+<sc-if value="{{intro}}" hint-placeholder-val="{{false}}">
+<div onClick="{{begin}}" style="position:fixed;inset:0;z-index:90;background:#F5F1E8;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;font-family:'Hanken Grotesk',sans-serif">
+<img src="img/zing-logo.svg" alt="Zing" style="width:340px;animation:dkLeaf 1.1s cubic-bezier(.2,.7,.25,1) both">
+<div style="margin-top:46px;font-size:26px;color:#647271;animation:dkFade 1s .5s ease both">Investor Overview · Summer 2026</div>
+<div style="display:flex;gap:10px;margin-top:26px;animation:dkFade 1s .8s ease both"><span style="width:9px;height:9px;border-radius:50%;background:#97A88D"></span><span style="width:9px;height:9px;border-radius:50%;background:#B2C0A8"></span><span style="width:9px;height:9px;border-radius:50%;background:#C9D8C2"></span></div>
+<div class="introHint" style="position:absolute;bottom:60px;font-size:22px;font-weight:600;color:#1D2E32">Click anywhere to begin</div>
+</div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showIntro&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Presenting&quot;},&quot;clickAdvance&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Presenting&quot;}}">
+class Component extends DCLogic {
+  state = { intro: true };
+  componentDidMount() {
+    this._onDocClick = (e) => {
+      if (this.state.intro && (this.props.showIntro ?? true)) return; // overlay handles itself
+      if (!(this.props.clickAdvance ?? true)) return;
+      const t = e.target;
+      if (!t || !t.closest) return;
+      // Only advance on clicks inside a slide's own (light-DOM) content.
+      // Clicks on the stage's shadow chrome (toolbar prev/next, rail) retarget
+      // to the <deck-stage> host and must NOT double-advance.
+      if (!t.closest('deck-stage section')) return;
+      const path = e.composedPath ? e.composedPath() : [t];
+      for (const n of path) {
+        if (n && n.matches && n.matches('a,button,input,select,textarea,iframe,image-slot,video,[contenteditable="true"],[data-hz]')) return;
+      }
+      const stage = document.querySelector('deck-stage');
+      if (stage) stage.next();
+    };
+    document.addEventListener('click', this._onDocClick);
+
+    // Rail-aware chrome: keep the left hover-zone + toggle clear of the thumbnail rail.
+    this._syncChrome = () => {
+      const stage = document.querySelector('deck-stage');
+      let off = 0;
+      try {
+        const rail = stage && stage.shadowRoot && stage.shadowRoot.querySelector('.rail');
+        if (rail) off = Math.max(0, Math.round(rail.getBoundingClientRect().right));
+      } catch (err) { off = 0; }
+      if (this._hzL) this._hzL.style.left = off + 'px';
+      if (this._railBtn) this._railBtn.style.left = (off + 16) + 'px';
+    };
+    this._onResize = () => this._syncChrome();
+    window.addEventListener('resize', this._onResize);
+    const stage = document.querySelector('deck-stage');
+    if (stage) {
+      try { if (localStorage.getItem('zing-deck.no-rail') !== '0') stage.setAttribute('no-rail', ''); } catch (err) {}
+      stage.addEventListener('slidechange', this._syncChrome);
+      const attach = (tries) => {
+        const rail = stage.shadowRoot && stage.shadowRoot.querySelector('.rail');
+        if (rail) {
+          this._mo = new MutationObserver(() => { this._syncChrome(); setTimeout(this._syncChrome, 230); });
+          this._mo.observe(rail, { attributes: true });
+          this._mo.observe(stage, { attributes: true });
+        } else if (tries > 0) setTimeout(() => attach(tries - 1), 250);
+        this._syncChrome();
+      };
+      attach(12);
+    }
+  }
+  componentWillUnmount() {
+    document.removeEventListener('click', this._onDocClick);
+    window.removeEventListener('resize', this._onResize);
+    if (this._mo) this._mo.disconnect();
+    const stage = document.querySelector('deck-stage');
+    if (stage) stage.removeEventListener('slidechange', this._syncChrome);
+  }
+  renderVals() {
+    const stage = () => document.querySelector('deck-stage');
+    return {
+      intro: this.state.intro && (this.props.showIntro ?? true),
+      begin: () => this.setState({ intro: false }),
+      goPrev: (e) => { e.stopPropagation(); const s = stage(); if (s) s.prev(); },
+      goNext: (e) => { e.stopPropagation(); const s = stage(); if (s) s.next(); },
+      hzLRef: (el) => { this._hzL = el; if (el && this._syncChrome) this._syncChrome(); },
+      railBtnRef: (el) => { this._railBtn = el; if (el && this._syncChrome) this._syncChrome(); },
+      toggleRail: (e) => {
+        e.stopPropagation();
+        const s = stage(); if (!s) return;
+        s.toggleAttribute('no-rail');
+        try { localStorage.setItem('zing-deck.no-rail', s.hasAttribute('no-rail') ? '1' : '0'); } catch (err) {}
+        if (this._syncChrome) { setTimeout(this._syncChrome, 50); setTimeout(this._syncChrome, 260); }
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>
