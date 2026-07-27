@@ -1,10 +1,10 @@
-# Zing Investor Deck
+# Zing Investor Deck V2
 
-Full-page, presenter-mode pitch deck (pitch.com-style) for Zing. Static site — no backend, no build step.
+Full-page, presenter-mode pitch deck built for recording a Loom. Static site — no backend, no build step. 14 slides following Alvaro's V6 script, including in-slide click builds.
 
 ## Run / deploy
 
-Serve the folder over HTTP and open it — **not** via `file://` (the deck and the embedded app fetch `.js`/`.jsx` at runtime, which browsers block on `file://`).
+Serve the folder over HTTP — **not** via `file://` (scripts are fetched at runtime):
 
 ```bash
 # from inside this folder
@@ -12,38 +12,35 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
-`index.html` at the root redirects to the deck. Or drop the whole folder on any static host (Netlify, Vercel, Cloudflare Pages, S3, GitHub Pages).
+Or drop the whole folder on any static host (Netlify, Vercel, Cloudflare Pages, S3, GitHub Pages). Root `index.html` redirects into the deck; the deck entry is `templates/investor-deck-v2/InvestorDeckV2.dc.html`.
 
-The deck entry itself is `templates/investor-deck/InvestorDeck.dc.html`.
+## Presenting (Loom mode)
 
-## Presenting
+- Welcome screen → click to begin (always starts at slide 1).
+- **Advance:** click anywhere, Space, or → . **Back:** ← . No visible chrome: the bottom toolbar is removed; edge arrows and the cover hint appear only on hover; the slide-panel button (bottom-left) is invisible until hovered.
+- **In-slide builds:** slide 3 (Sarah) — 1 click crosses $250 → $69. Slide 5 (map) — 4 clicks: zoom to target building → $ badge → nearby buildings turn green → zoom out, whole neighborhood converts. Space/→ plays builds before advancing; ← rewinds them.
+- **Re-takes:** jumping back to any slide resets its animations and builds — no refresh needed.
+- Slide 13 has no CTA; the end slide links to Calendly.
 
-- **Advance:** click anywhere, press Space, or press → . **Back:** press ← , or hover the left/right edge and click the arrow.
-- Loads full-screen with the slide panel hidden. The round button (bottom-left) shows/hides the slide thumbnail rail; the choice is remembered.
-- 15 slides. Slides 2, 10 and 14 embed the **live resident app** (fully clickable mid-presentation). Slide 15 has a **Download** (one-pager) and a **Schedule a Calendly call** button.
+## Structure (keep this layout — relative paths matter)
 
-## Structure (relative paths matter — keep this layout)
+- `templates/investor-deck-v2/` — the deck
+  - `InvestorDeckV2.dc.html` — entry
+  - `support.js` — runtime
+  - `ds-base.js` — loads the design-system CSS + bundle from two levels up
+  - `deck-stage.js`, `image-slot.js` — stage + drag-to-replace image slots
+  - `img/` (compressed ≤1920px JPEGs), `icons/`
+- `styles.css`, `tokens/`, `components/components.css`, `_ds_bundle.js` — Zing design system
 
-- `templates/investor-deck/` — the deck and its assets
-  - `InvestorDeck.dc.html` — the deck (open this)
-  - `support.js` — deck runtime (assembled by the design-system tooling)
-  - `ds-base.js` — loads the design-system CSS + bundle (paths point two levels up)
-  - `deck-stage.js` — slide-stage web component (scaling, nav, rail, print)
-  - `image-slot.js` — drag-to-replace headshots on the team slide
-  - `one-pager.html` — printable one-pager opened by the Download button
-  - `img/`, `icons/` — deck imagery
-- `styles.css`, `tokens/`, `components/components.css`, `_ds_bundle.js` — Zing design system (referenced by `ds-base.js`)
-- `ui_kits/resident-scheduling/` — the live resident app embedded in the demo slides
+## Image drop-slots
 
-> The deck uses relative `../../` references to reach the shared design-system files and the app. Keep the folder layout intact when deploying.
+Cover background and the Sarah photo are `<image-slot>` placeholders containing detailed generation prompts — replace by dropping generated images on them (in the editor) or by editing the `src` in the deck HTML. Team headshots: `img/alvaro.jpg` / `img/tapan.jpg`.
 
 ## External dependencies (CDN, internet required)
 
-- React 18 + ReactDOM (UMD) and Babel Standalone — used by the embedded resident app (pinned with integrity hashes)
 - Google Fonts: Newsreader + Hanken Grotesk
 
 ## Notes
 
-- The embedded app transpiles its `.jsx` in-browser via Babel for prototype convenience. For production, precompile it (Vite/esbuild) and drop the Babel CDN script.
-- Founder headshots on the Team slide can be swapped by dropping images onto the circles (in the live editor) or replacing `img/alvaro.jpg` / `img/tapan.jpg`.
-- Calendly button points at the provided scheduling link; edit the `href` in `InvestorDeck.dc.html` to change it.
+- All images are pre-compressed (the deck totals ~2 MB of imagery) — keep new images similarly sized to avoid memory pressure in embedded browsers.
+- Calendly link is set on the end slide; edit the `href` in `InvestorDeckV2.dc.html` to change it.
