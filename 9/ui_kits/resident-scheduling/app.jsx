@@ -614,7 +614,7 @@ function App() {
   const [infoItem, setInfoItem] = useState(null);
   const [onboarded, setOnboarded] = useState(() => {
     if (presetCart) return true;
-    try { const q = new URLSearchParams(location.search); if (q.has("home")) return true; if (q.has("onboarding")) return false; } catch (e) {}
+    try { if (new URLSearchParams(location.search).has("onboarding")) return false; } catch (e) {}
     try { return localStorage.getItem("zing.onboarded") === "1"; } catch (e) { return false; }
   });
   const [profile, setProfile] = useState({ name: "Whit", building: "Bezel Miami", apt: "1925", phone: "770 656 0139", pets: "" });
